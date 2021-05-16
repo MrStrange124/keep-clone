@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  padding: 1rem 2rem;
+  background-color: #ffd32a;
+  box-shadow: 0 2px 2px #d2dae2;
+}
+
+body {
+  background-color: #f1f2f6;
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  padding-left: 0.5rem;
+  font-size: 3rem;
+}
+
+.addsec {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+.addicon {
+  background-color: #ffd32a;
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 110px;
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.addnote {
+  font-size: 2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.5rem;
+}
+
+.note {
+  margin: 0 0 1.5rem 1.5rem;
+  width: 40rem;
+  height: 20rem;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px #d2dae2;
+  display: inline-block;
+}
+.note .icon {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.note .editicon {
+  width: 32px;
+  height: 32px;
+  padding: 0.5rem;
+  margin: 0 0.5rem 0.8rem 0;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #27ae60;
+}
+.note .editicon:hover {
+  background-color: #dcdde1;
+}
+.note .deleteicon {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  padding: 0.5rem 0.7rem;
+  margin: 0 0.5rem 0.8rem 0;
+  border-radius: 50%;
+  color: #e74c3c;
+}
+.note .deleteicon:hover {
+  background-color: #dcdde1;
+}
+.note .content {
+  height: 14rem;
+  resize: none;
+  overflow: auto;
+  font-size: 1.5rem;
+}
+.note .type {
+  width: 100%;
+  border: none;
+  height: 14rem;
+  resize: none;
+  overflow: auto;
+  font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
