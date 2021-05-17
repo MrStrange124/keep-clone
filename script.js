@@ -38,7 +38,7 @@ const addNewNode = (text2 = '') => {
     })
     textarea.addEventListener('change', (event) => {
         const value = event.target.value;
-        maindiv.innerHTML = value;
+        maindiv.innerHTML = ""+value;
         updateLSData();
     })
     const note_container = document.querySelector('.note-container');
