@@ -22,33 +22,33 @@ body {
 }
 .addsec {
 	width: 100%;
-	height: 50px;
-	// border: 2px solid red;
-	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding: 1rem 2rem 0 2rem;
 }
 .addicon {
 	background-color: #ffd32a;
 	padding: 1rem;
 	border-radius: 50%;
-	position: absolute;
-	right: 110px;
-	top: 50%;
 	cursor: pointer;
-	transform: translateY(-50%);
 }
 .addnote {
+	margin-left: 1rem;
 	font-size: 2rem;
 	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	font-weight: 700;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	right: 1.5rem;
+}
+.note-container {
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(25rem, 1fr));
+	grid-auto-rows: 20rem;
+	grid-gap: 1rem;
+	word-wrap: break-word;
 }
 .note {
-	margin: 0 0 1.5rem 1.5rem;
-	width: 40rem;
-	height: 20rem;
+	// margin: 0 0 1.5rem 1.5rem;
 	background-color: white;
 	padding: 1rem;
 	box-shadow: 2px 2px 2px #d2dae2;
@@ -87,6 +87,7 @@ body {
 		}
 	}
 	.content {
+		width: 100%;
 		height: 14rem;
 		resize: none;
 		overflow: auto;
@@ -103,4 +104,14 @@ body {
 }
 .hidden {
 	display: none;
+}
+@media (max-width: 800px) {
+	.note-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 475px) {
+	.note-container {
+		grid-template-columns: 1fr;
+	}
 }

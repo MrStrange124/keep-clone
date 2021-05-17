@@ -3,13 +3,12 @@ const updateLSData = () => {
     const textAreaData = document.querySelectorAll('textarea');
     const notes = [];
     textAreaData.forEach((note) => {
-        return notes.push(note.value);
+        if (note.value) return notes.push(note.value);
     });
     localStorage.setItem('notes', JSON.stringify(notes));
 }
 
 const addNewNode = (text2 = '') => {
-    // console.log((text2));
     const note = document.createElement('div');
     note.classList.add('note');
     const htmlData = `<div class="icon">
@@ -36,22 +35,24 @@ const addNewNode = (text2 = '') => {
     editbtn.addEventListener('click', () => {
         maindiv.classList.toggle('hidden');
         textarea.classList.toggle('hidden');
-        // updateLSData();
     })
     textarea.addEventListener('change', (event) => {
         const value = event.target.value;
-        maindiv.innerHTML = value;
-        updateLSData();
+        if (!(value.search("<") != -1 && value.search(">") != -1)) {
+            maindiv.innerHTML = value;
+            updateLSData();
+        }
+        else {
+            alert("Enter a valid text!");
+        }
     })
-
-    document.body.appendChild(note);
+    const note_container = document.querySelector('.note-container');
+    note_container.appendChild(note);
 }
 //retriving data from local storage
 const notes = JSON.parse(localStorage.getItem('notes'));
-// console.log(notes)
 if (notes) {
     notes.forEach((note) => {
-        console.log(note);
         addNewNode(note);
     });
 }
