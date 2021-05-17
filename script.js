@@ -38,7 +38,7 @@ const addNewNode = (text2 = '') => {
     })
     textarea.addEventListener('change', (event) => {
         const value = event.target.value;
-        if (!(value.search("<") != -1 && value.search(">") != -1)) {
+        if (!(value.search("<") != -1 && value.search(">") != -1) && value[0] != '<') {
             maindiv.innerHTML = value;
             updateLSData();
         }
