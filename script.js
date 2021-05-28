@@ -16,7 +16,7 @@ const addNewNode = (text2 = '') => {
     <i class="fas fa-trash-alt fa-2x deleteicon"></i>
     </div>
     <div class="content ${text2 ? "" : "hidden"}">${text2}</div>
-    <textarea class="type ${text2 ? "hidden" : ""}">${text2}</textarea>`;
+    <textarea class="type ${text2 ? "hidden" : ""}" placeholder="Add note...">${text2}</textarea>`;
     note.insertAdjacentHTML('afterbegin', htmlData);
 
     //getting reference
